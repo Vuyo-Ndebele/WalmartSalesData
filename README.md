@@ -12,7 +12,7 @@ About Data
 
 The dataset was obtained from the Kaggle Walmart Sales Forecasting Competition. This dataset contains sales transactions from a three different branches of Walmart, respectively located in Mandalay, Yangon and Naypyitaw. The data contains 17 columns and 1000 rows:
 
-Analysis List
+<H3> Analysis List </H3>
 
 Product Analysis
 
@@ -26,7 +26,7 @@ Customer Analysis
 
 This analysis aims to uncover the different customers segments, purchase trends and the profitability of each customer segment.
 
-Approach Used
+<H3> Approach Used </H3>
 
 Data Wrangling: This is the first step where inspection of data is done to make sure NULL values and missing values are detected and data replacement methods are used      to replace, missing or NULL values.
 
@@ -44,7 +44,7 @@ Add a new column named month_name that contains the extracted months of the year
 
 Exploratory Data Analysis (EDA): Exploratory data analysis is done to answer the listed questions and aims of this project.
 
-Conclusion:
+<H3> Conclusion: </H3>
 
 Business Questions To Answer
 Generic Question
@@ -52,7 +52,7 @@ Generic Question
 How many unique cities does the data have?
 In which city is each branch?
 
-Product
+<H3> Product </H3>
 
 How many unique product lines does the data have?
 What is the most common payment method?
@@ -67,14 +67,14 @@ Which branch sold more products than average product sold?
 What is the most common product line by gender?
 What is the average rating of each product line?
 
-Sales
+<H3> Sales </H3>
 
 Number of sales made in each time of the day per weekday
 Which of the customer types brings the most revenue?
 Which city has the largest tax percent/ VAT (Value Added Tax)?
 Which customer type pays the most in VAT?
 
-Customer
+<H3> Customer </H3>
 
 How many unique customer types does the data have?
 How many unique payment methods does the data have?
