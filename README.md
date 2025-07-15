@@ -14,8 +14,6 @@ The major aim of thie project is to gain insight into the sales data of Walmart 
 
 The dataset was obtained from the [Kaggle Walmart Sales Forecasting Competition](https://www.kaggle.com/c/walmart-recruiting-store-sales-forecasting). This dataset contains sales transactions from three different branches of Walmart, respectively located in Mandalay, Yangon and Naypyitaw. The data contains 17 columns and 1000 rows:
 
-
-
 <H3> Analysis List </H3>
 
 1. Product Analysis
