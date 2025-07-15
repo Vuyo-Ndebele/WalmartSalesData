@@ -30,11 +30,11 @@ This analysis aims to uncover the different customers segments, purchase trends 
 
 <H1> Approach Used </H1>
 
-1. <H3> Data Wrangling: </H3> This is the first step where inspection of data is done to make sure <H3>NULL</H3> values and missing values are detected and data replacement methods are used to replace, missing or <H3>NULL</H3> values.
+1. <H3> Data Wrangling: </H3> This is the first step where inspection of data is done to make sure NULL values and missing values are detected and data replacement methods are used to replace, missing or NULL values.
 
 1. Build a database
 2. Create table and insert the data.
-3. Select columns with null values in them. There are no null values in our database as in creating the tables, we set <H3>NOT NULL</H3> for each field, hence null values are filtered out.
+3. Select columns with null values in them. There are no null values in our database as in creating the tables, we set NOT NULL for each field, hence null values are filtered out.
 
 2. <H3>Feature Engineering:</H3> This will help use generate some new columns from existing ones.
 
