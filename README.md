@@ -150,10 +150,78 @@ file
 
 ```SQL
 
--- Create database
+CREATE DATABASE WalmartSales;
+USE WalmartSales;
 
-CREATE DATABASE IF NOT EXISTS walmartSales;
+SELECT *
+FROM WalmartSalesData;
 
--- Create table
+ALTER TABLE WalmartSalesData
+ALTER COLUMN invoice_id VARCHAR(30) NOT NULL;
+
+ALTER TABLE WalmartSalesData
+ADD CONSTRAINT PK_invoice_id
+PRIMARY KEY (invoice_id);
+
+ALTER TABLE WalmartSalesData
+ALTER COLUMN branch VARCHAR(5) NOT NULL;
+
+ALTER TABLE WalmartSalesData
+ALTER COLUMN city VARCHAR(30) NOT NULL;
+
+EXEC sp_rename 'WalmartSalesData.Customer_type', 'Customer_Type', 'COLUMN';
+
+ALTER TABLE WalmartSalesData
+ALTER COLUMN customer_type VARCHAR(30) NOT NULL;
+
+ALTER TABLE WalmartSalesData
+ALTER COLUMN gender VARCHAR(10) NOT NULL;
+
+EXEC sp_rename 'WalmartSalesData.Product_line', 'Product_Line', 'COLUMN';
+
+ALTER TABLE WalmartSalesData
+ALTER COLUMN product_line VARCHAR(100) NOT NULL;
+
+EXEC sp_rename 'WalmartSalesData.unit_price', 'Unit_Price', 'COLUMN';
+
+ALTER TABLE WalmartSalesData
+ALTER COLUMN unit_price DECIMAL(10, 2) NOT NULL;
+
+ALTER TABLE WalmartSalesData
+ALTER COLUMN quantity INT NOT NULL;
+
+EXEC sp_rename 'WalmartSalesData.Tax', 'Vat', 'COLUMN';
+
+ALTER TABLE WalmartSalesData
+ALTER COLUMN total DECIMAL(12, 4) NOT NULL;
+
+ALTER TABLE WalmartSalesData
+ALTER COLUMN date DATETIME NOT NULL;
+
+ALTER TABLE WalmartSalesData
+ALTER COLUMN time TIME NOT NULL;
+
+EXEC sp_rename 'WalmartSalesData.Payment', 'Payment_Method', 'COLUMN';
+
+ALTER TABLE WalmartSalesData
+ALTER COLUMN payment_method VARCHAR(15) NOT NULL;
+
+EXEC sp_rename 'WalmartSalesData.cogs', 'Cogs', 'COLUMN';
+
+ALTER TABLE WalmartSalesData
+ALTER COLUMN cogs DECIMAL(10, 2) NOT NULL;
+
+EXEC sp_rename 'WalmartSalesData.gross_income', 'Gross_Income', 'COLUMN';
+
+ALTER TABLE WalmartSalesData
+ALTER COLUMN gross_income DECIMAL(12, 4) NOT NULL;
+
+EXEC sp_rename 'WalmartSalesData.gross_margin_percentage', 'Gross_Margin_Percentage', 'COLUMN';
+
+ALTER TABLE WalmartSalesData
+ALTER COLUMN gross_margin_percentage DECIMAL(11, 9) NOT NULL;
+
+ALTER TABLE WalmartSalesData
+ALTER COLUMN rating DECIMAL(5, 2);
 
 ```
