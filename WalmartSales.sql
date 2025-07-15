@@ -1,4 +1,4 @@
- CREATE DATABASE WalmartSales;
+CREATE DATABASE WalmartSales;
 USE WalmartSales;
 
 SELECT *
