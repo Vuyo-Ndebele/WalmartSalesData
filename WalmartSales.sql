@@ -230,4 +230,140 @@ FROM WalmartSalesData
 GROUP BY Product_Line
 ORDER BY Average_Rating DESC;
 
+-- Product --
+
+-- 2. Which of the customer types brings the most revenue? --
+
+WITH Customer_With_Most_Revenue AS (
+	SELECT Customer_Type, Total
+	FROM WalmartSalesData
+)
+SELECT Customer_Type, ROUND(SUM(Total), 2) AS Most_Revenue
+FROM Customer_With_Most_Revenue
+GROUP BY Customer_Type
+ORDER BY Most_Revenue DESC;
+
+-- 3. Which city has the largest tax percentage or VAT (Value Added Tax)? --
+
+WITH City_With_Largest_Vat AS (
+	SELECT City, Vat
+	FROM WalmartSalesData
+)
+SELECT City, ROUND(SUM(Vat), 2) AS Largest_Vat
+FROM City_With_Largest_Vat
+GROUP BY City
+ORDER BY Largest_Vat DESC;
+
+-- 4. Which customer type pays the most in VAT? --
+
+WITH Customer_With_Most_Vat AS (
+	SELECT Customer_Type, Vat
+	FROM WalmartSalesData
+)
+SELECT Customer_Type, SUM(Vat) AS Most_Vat
+FROM Customer_With_Most_Vat
+GROUP BY customer_type
+ORDER BY Most_Vat DESC;
+
+-- Customer --
+
+-- 1. How many unique customer type does the data have? --
+
+SELECT DISTINCT Customer_Type
+FROM WalmartSalesData;
+
+-- 2. How many unique payment methods does the data have? --
+
+SELECT DISTINCT Payment_Method
+FROM WalmartSalesData;
+
+-- 3. What is the most common customer type? --
+
+WITH Common_Customer_Type AS (
+	SELECT Customer_Type
+	FROM WalmartSalesData
+)
+SELECT TOP 1 Customer_Type, COUNT(*) AS Frequency_Customer_Type
+FROM Common_Customer_Type
+GROUP BY Customer_Type
+ORDER BY Frequency_Customer_Type DESC
+
+-- 4. Which customer type buys the most? --
+
+WITH Customer_That_Buys_The_Most AS (
+	SELECT Customer_Type
+	FROM WalmartSalesData
+)
+SELECT Customer_Type, COUNT(*) AS Customer_Count
+FROM Customer_That_Buys_The_Most
+GROUP BY Customer_Type
+ORDER BY Customer_Count DESC;
+
+-- 5. What is the gender of most customers? --
+
+WITH Gender_of_Most_Customers AS (
+	SELECT Gender
+	FROM WalmartSalesData
+)
+SELECT Gender, COUNT(*) AS Number_of_Gender
+FROM Gender_of_Most_Customers
+GROUP BY Gender
+ORDER BY Number_of_Gender DESC;
+
+-- 6. What is the gender distribution per branch? --
+
+WITH Branch_of_Customers AS (
+	SELECT Branch, Gender
+	FROM WalmartSalesData
+	WHERE Branch IN('A', 'B', 'C')
+)
+SELECT Branch, Gender, COUNT(*) AS Number_of_Gender
+FROM Branch_of_Customers
+GROUP BY Branch, Gender
+ORDER BY Branch DESC, Number_of_Gender DESC;
+
+-- 7. Which time of the day do customers give the most rating? --
+
+WITH Time_of_The_Day_With_Most_Ratings AS (
+	SELECT Time_of_Day
+	FROM WalmartSalesData
+)
+SELECT Time_of_Day, COUNT(*) AS Most_Rating
+FROM Time_of_The_Day_With_Most_Ratings
+GROUP BY Time_of_Day
+ORDER BY Most_Rating DESC;
+
+-- 8. Which time of the day do customers give the most ratings per branch? --
+
+WITH Time_of_The_Day_With_Most_Ratings AS (
+	SELECT Branch, Time_of_Day
+	FROM WalmartSalesData
+	WHERE Branch IN('A', 'B', 'C')
+)
+SELECT Branch, Time_of_Day, COUNT(*) AS Most_Ratings
+FROM Time_of_The_Day_With_Most_Ratings 
+GROUP BY Branch, Time_of_Day
+ORDER BY Branch DESC, Most_Ratings DESC;
+
+-- 9. Which day of the week has the best average ratings? --
+
+WITH The_Best_Day_Avg_Ratings AS (
+	SELECT Day_Name, Rating
+	FROM WalmartSalesData
+)
+SELECT Day_Name, AVG(Rating) AS Best_Average_Ratings
+FROM The_Best_Day_Avg_Ratings
+GROUP BY Day_Name
+ORDER BY Best_Average_Ratings DESC;
+
+-- 10. Which day of the week has the best average ratings per branch? --
+
+WITH The_Best_Day_Avg_Ratings AS (
+	SELECT Branch, Day_Name, Rating
+	FROM WalmartSalesData
+)
+SELECT Branch, Day_Name, AVG(Rating) AS Best_Average_Ratings
+FROM The_Best_Day_Avg_Ratings
+GROUP BY Branch, Day_Name
+ORDER BY Branch DESC, Best_Average_Ratings DESC;
 
