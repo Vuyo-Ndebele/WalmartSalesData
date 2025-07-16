@@ -231,7 +231,7 @@ FROM WalmartSalesData
 GROUP BY Product_Line
 ORDER BY Average_Rating DESC;
 
--- Product 
+-- Sales
 
 -- 1. Number of sales made in each time of the day per weekday --
 
