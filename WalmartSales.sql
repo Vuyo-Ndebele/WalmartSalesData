@@ -137,6 +137,7 @@ SELECT DISTINCT City, Branch
 FROM WalmartSalesData;
 
 -- Product --
+
 -- 1. How many unique product lines does the data have --
 
 SELECT DISTINCT Product_Line
