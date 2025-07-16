@@ -230,7 +230,19 @@ FROM WalmartSalesData
 GROUP BY Product_Line
 ORDER BY Average_Rating DESC;
 
--- Product --
+-- Product 
+
+-- 1. Number of sales made in each time of the day per weekday --
+
+WITH MondaySales AS (
+	SELECT Day_Name, Time_of_Day, Total
+	FROM WalmartSalesData
+	WHERE Day_Name = 'Monday'
+)
+SELECT Day_Name, Time_of_Day, COUNT(total) AS Number_of_Sales
+FROM MondaySales
+GROUP BY Day_Name, Time_of_Day
+ORDER BY Number_of_Sales DESC;
 
 -- 2. Which of the customer types brings the most revenue? --
 
