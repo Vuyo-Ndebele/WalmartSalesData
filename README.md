@@ -55,11 +55,11 @@ The dataset was obtained from the [Kaggle Walmart Sales Forecasting Competition]
 > 1. Build a database
 > 2. The SQL script does a comprehensive cleanup and transformation of the WalmartSalesData table. It includes:
 
-    > A. Renaming columns for consistency (using EXEC sp_rename)
+    - Renaming columns for consistency (using EXEC sp_rename)
 
-    > B. Setting stricter data types and NOT NULL constraints
+    - Setting stricter data types and NOT NULL constraints
 
-    > C. Adding a primary key on invoice_id
+    - Adding a primary key on invoice_id
 
 > 3. Select columns with null values in them. There are no null values in our database as in creating the tables, we set **NOT NULL** for each field, hence null values are filtered out.
 
