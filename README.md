@@ -53,7 +53,8 @@ The dataset was obtained from the [Kaggle Walmart Sales Forecasting Competition]
 1. **Data Wrangling:** This is the first step where inspection of data is done to make sure **NULL** values and missing values are detected and data replacement methods are used to replace, missing or **NULL** values.
 
 > 1. Build a database
-> 2. The SQL script does a comprehensive cleanup and transformation of the WalmartSalesData table. It includes:
+> 2. The SQL script does a comprehensive cleanup and transformation of the WalmartSalesData table.
+>    It includes:
 
     - Renaming columns for consistency (using EXEC sp_rename).
 
