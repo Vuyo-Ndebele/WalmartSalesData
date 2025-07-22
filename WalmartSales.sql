@@ -380,3 +380,61 @@ FROM The_Best_Day_Avg_Ratings
 GROUP BY Branch, Day_Name
 ORDER BY Branch DESC, Best_Average_Ratings DESC;
 
+-- Revenue and Profit Calculations --
+
+WITH Profit_Calculation AS (
+  SELECT 
+    ws.Product_Line, 
+    ws.Unit_Price, 
+    ws.Quantity, 
+    ws.Vat, 
+    ws.Cogs,
+    ROUND((ws.unit_price * ws.quantity + ws.vat), 2) AS Total_Revenue,
+    ROUND((ws.unit_price * ws.quantity + ws.vat) - ws.cogs, 2) AS Profit,
+    CASE 
+      WHEN ((ws.unit_price * ws.quantity + ws.vat) - ws.cogs) > 0 THEN 'Profit'
+      WHEN ((ws.unit_price * ws.quantity + ws.vat) - ws.cogs) < 0 THEN 'Loss'
+      ELSE 'Break-Even'
+    END AS Profit_Status,
+    ROUND(
+      CASE 
+        WHEN ws.cogs > 0 THEN ((ws.unit_price * ws.quantity + ws.vat) - ws.cogs) / ws.cogs * 100
+        ELSE NULL
+      END, 2
+    ) AS Profit_Margin_Percent
+  FROM WalmartSalesData ws
+)
+SELECT 
+  Product_Line, 
+  Unit_Price, 
+  Quantity, 
+  Vat, 
+  Cogs,
+  Total_Revenue, 
+  Profit, 
+  Profit_Status,
+  Profit_Margin_Percent
+FROM Profit_Calculation;
+
+-- Calculate Total Gross Sales --
+
+WITH Gross_Sale AS (
+  SELECT 
+    Product_Line, 
+	Unit_Price,
+	Quantity,
+	Cogs,
+	Vat
+    Vat, 
+	(Cogs + Vat) AS Total_Gross_Sales
+	FROM WalmartSalesData
+)
+SELECT 
+  Product_Line,
+  Unit_Price,
+  Quantity,
+  Cogs,
+  Vat, 
+  Total_Gross_Sales
+FROM Gross_Sale;
+
