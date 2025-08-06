@@ -42,10 +42,10 @@ The main objectives of this project are to extract actionable insights from Walm
 
 ## 🛠️ Tools Used – Walmart Sales Analysis
 
-🛢️ SQL Data extraction, Data cleaning, filtering, aggregation
-📗 Microsoft Excel	pivot tables, exploratory analysis, and initial summaries
-📊 Power BI Creating interactive dashboards and visualizing sales trends
-📂 CSV/Excel Files	Raw sales data input format
+- 🛢️ SQL Data extraction, Data cleaning, filtering, aggregation
+- 📗 Microsoft Excel	pivot tables, exploratory analysis, and initial summaries
+- 📊 Power BI Creating interactive dashboards and visualizing sales trends
+- 📂 CSV/Excel Files	Raw sales data input format
 
 ## 📂 Data Collection
 
