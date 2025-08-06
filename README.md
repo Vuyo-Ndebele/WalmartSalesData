@@ -299,3 +299,5 @@ ALTER TABLE WalmartSalesData
 ALTER COLUMN rating DECIMAL(5, 2);
 
 ```
+![](thankyou.png)
+
