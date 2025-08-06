@@ -1,6 +1,6 @@
 # Walmart Sales Data Analysis
 
-![](social-media-icon.jpg)
+![](walmart-store.jpg)
 
 ## 🔍 Project Overview
 
