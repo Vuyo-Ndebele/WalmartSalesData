@@ -1,16 +1,53 @@
 # Walmart Sales Data Analysis
 
-## About
+## 🔍 Project Overview
 
 This project aims to explore the Walmart Sales data to understand top performing branches and products, sales trends of different products and customer behaviour. The aim is to study how sales strategies can be improved and optimized. The dataset was obtained from the [Kaggle Walmart Sales Forecasting Competition](https://www.kaggle.com/c/walmart-recruiting-store-sales-forecasting).
 
 "In this recruiting competition, job-seekers are provided with historical sales data for 45 Walmart stores located in different regions. Each store contains many departments, and participants must project the sales for each department in each store. To add to the challenge, selected holiday markdown events are included in the dataset. These markdowns are known to affect sales, but it is challenging to predict which departments are affected and the extent of the impact." [source](https://www.kaggle.com/c/walmart-recruiting-store-sales-forecasting).
 
-## Purposes Of The Project
+## ❗ Problem Statement
 
-The major purpose of this project is to gain insight into the sales data of Walmart to understand the different factors that affect sales of different branches.
+Walmart, one of the world’s largest retail chains, operates thousands of stores across different regions, offering a wide variety of products. Despite its scale, maximizing profitability and operational efficiency remains a challenge due to varying customer demand, seasonality, and regional differences.
 
-## About Data
+- The core problem is to analyze historical sales data to:
+
+- Identify sales trends across different store locations and departments.
+
+- Determine the impact of holidays and promotional events on sales.
+
+- Understand seasonal fluctuations and how they affect specific product categories.
+
+- Forecast future sales to assist in inventory planning and resource allocation.
+
+- Provide actionable insights to support data-driven business decisions.
+
+## 🎯 Objectives
+
+The main objectives of this project are to extract actionable insights from Walmart’s historical sales data to support strategic planning and operational efficiency. Specifically, the project aims to:
+
+- Analyze sales performance across different stores, departments, and time periods.
+
+- Identify peak sales periods and evaluate the effect of holidays and promotions on revenue.
+
+- Detect underperforming stores or departments to inform improvement strategies.
+
+- Uncover seasonal trends that influence customer purchasing behavior.
+
+- Develop accurate sales forecasts to support inventory management and demand planning.
+
+- Visualize key sales metrics using interactive dashboards for business users and stakeholders.
+
+- Recommend data-driven strategies for enhancing sales, optimizing stock levels, and improving customer satisfaction.
+
+## 🛠️ Tools Used – Walmart Sales Analysis
+
+🛢️ SQL Data extraction, Data cleaning, filtering, aggregation
+📗 Microsoft Excel	pivot tables, exploratory analysis, and initial summaries
+📊 Power BI Creating interactive dashboards and visualizing sales trends
+📂 CSV/Excel Files	Raw sales data input format
+
+## 📂 Data Collection
 
 The dataset was obtained from the [Kaggle Walmart Sales Forecasting Competition](https://www.kaggle.com/c/walmart-recruiting-store-sales-forecasting). This dataset contains sales transactions from three different branches of Walmart, respectively located in Mandalay, Yangon and Naypyitaw. The data contains 17 columns and 1000 rows:
 
@@ -34,7 +71,7 @@ The dataset was obtained from the [Kaggle Walmart Sales Forecasting Competition]
 | gross_income            | Gross Income                            | DECIMAL(10, 2) |
 | rating                  | Rating                                  | FLOAT(2, 1)    |
 
-### Analysis List
+### 📈 Analysis List
 
 1. Product Analysis
 
@@ -48,7 +85,7 @@ The dataset was obtained from the [Kaggle Walmart Sales Forecasting Competition]
 
 > This analysis aims to uncover different customer segments, purchase trends and the profitability of each customer segment.
 
-## Approach Used
+## 📝 Approach Used
 
 1. **Data Wrangling:** This is the first step where inspection of data is done to make sure **NULL** values and missing values are detected and data replacement methods are used to replace, missing or **NULL** values.
 
@@ -74,7 +111,7 @@ The dataset was obtained from the [Kaggle Walmart Sales Forecasting Competition]
 
 2. **Exploratory Data Analysis (EDA):** Exploratory data analysis is done to answer the listed questions and aims of this project.
 
-3. **Conclusion:**
+3. **🧾Conclusion:**
    
 > The analysis of Walmart sales data reveals several key insights into customer behavior, sales trends, and operational performance across branches and product lines.
 > The  data shows consistent peak sales during specific times of the day and days of the week, highlighting clear shopping patterns.
@@ -82,7 +119,7 @@ The dataset was obtained from the [Kaggle Walmart Sales Forecasting Competition]
 > Customer types and gender distribution also influence purchasing behavior, offering a deeper understanding of target demographics.
 > Seasonal variations and branch-level performance differences further suggest that location and timing significantly impact overall sales.
 
-4. **Recommendations:**
+4. **💡Recommendations:**
    
 > 1. Optimize Inventory Based on Product Line Performance
 - Focus on stocking high-demand product lines while reconsidering or improving underperforming ones. Use historical sales trends to predict demand more accurately.
